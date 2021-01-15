@@ -33,6 +33,11 @@ MongoClient.connect('mongodb://localhost:27017', {useUnifiedTopology: true}, (er
     res.render('search.ejs', {})
   })
 
+  // edit FORM
+router.get('/search', (req, res) => {
+  res.render('search.ejs', {});
+})
+
   /* FIND A PRODUCT */
   router.post('/search', (req, res) => {
   var query = { naam: req.body.naam }
