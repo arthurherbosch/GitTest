@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Namen</title>
+</head>
+<body>
+  <h1>Alle namen</h1>
+ <br/><br/>
+  <ul>
+  <% namen.forEach(function(name) { %>
+    <li>
+      <span><b>ID : </b><%= name._id %></span><br />
+      <span><b>Naam : </b><%= name.naam %></span><br />
+      <span><b>achternaam : </b><%= name.achternaam %></span><br />
+      <span><b>leeftijd : </b><%= name.leeftijd %></span><br />
+    </li>
+  <% }) %>
+  </ul>
+<br/>
+
+
+<a href='/namen/add'>Voeg een naam toe</a>&nbsp;&nbsp;<a href='/namen/search'>Zoek een naam</a>
+
+</body>
+</html>

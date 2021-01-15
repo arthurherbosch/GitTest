@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Namen</title>
+</head>
+<body>
+  <h2>Result</h2>
+  <br/><br/>
+  <p>
+   <span><b>ID : </b><%= name.id %></span><br />
+   <span><b>naam : </b><%= name.naam %></span><br/>
+   <span><b>achternaam : </b><%= name.achternaam %></span><br />
+   <span><b>leeftijd : </b><%= name.leeftijd %></span><br/>
+  </p>
+
+  <form action='/namen/delete' method='POST' onsubmit="return confirm('Bent U zeker?');">
+    <span><input type='hidden' name='id' value='<%= name.id %>'></span>
+    <span><button type='submit'>Delete</button></span>
+  </form>
+
+    <form action='/namen' method='GET' >
+    <span><button type='submit'>Go back</button></span>
+  </form>
+
+</body>
+</html>
